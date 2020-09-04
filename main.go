@@ -24,8 +24,8 @@ type HttpError struct {
 
 func LinkReader(resp *http.Response, depth int) []Link {
 	page := html.NewTokenizer(resp.Body)
-	links := []Link{}
 
+	var links []Link
 	var start *html.Token
 	var text string
 
